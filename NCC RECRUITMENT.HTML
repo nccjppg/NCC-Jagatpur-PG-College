@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCC Recruitment | 2 UP EME COY NCC</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-light: #f4f7fe;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --neon-blue: #00f3ff;
+  --neon-purple: #8a2be2;
+  --neon-pink: #ff007f;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --glow-blue: 0 0 15px rgba(0, 243, 255, 0.6), 0 0 30px rgba(0, 243, 255, 0.2);
+  --glow-purple: 0 0 15px rgba(138, 43, 226, 0.5), 0 0 30px rgba(138, 43, 226, 0.2);
+  --glow-pink: 0 0 15px rgba(255, 0, 127, 0.5);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Graphic Grid */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -2;
+}
+
+/* Animated Neon Glowing Orbs Background */
+.neon-orb-1 {
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 243, 255, 0.25), transparent 70%);
+  top: -100px;
+  right: -100px;
+  z-index: -1;
+  filter: blur(50px);
+}
+
+.neon-orb-2 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 0, 127, 0.18), transparent 70%);
+  bottom: -150px;
+  left: -100px;
+  z-index: -1;
+  filter: blur(60px);
+}
+
+.container {
+  width: min(1150px, 92%);
+  margin: auto;
+}
+
+/* Neon Text Utilities */
+.neon-text-blue {
+  color: #00b4d8;
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.neon-text-pink {
+  color: #e60067;
+  text-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-box {
+  width: 100%;
+  padding: 55px 30px;
+  border-radius: 32px;
+  background: var(--card-bg);
+  border: 2px solid rgba(0, 243, 255, 0.4);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 15px 35px rgba(0, 243, 255, 0.15), inset 0 0 15px rgba(0, 243, 255, 0.1);
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 50px;
+  background: #ffffff;
+  border: 1px solid var(--neon-blue);
+  color: #0077b6;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  box-shadow: var(--glow-blue);
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, #00b4d8, #8a2be2, #ff007f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  color: #d90429;
+  text-shadow: 0 0 8px rgba(217, 4, 41, 0.3);
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.btn, .btn:visited, .btn:active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, #00f3ff, #8a2be2);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 243, 255, 0.4);
+  border: 1px solid #ffffff;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(138, 43, 226, 0.5);
+}
+
+/* SECTION HEADINGS */
+section {
+  padding: 50px 0;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.heading h2 {
+  font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #0077b6, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading p {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* CARDS GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1.5px solid rgba(0, 243, 255, 0.3);
+  border-radius: 24px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--neon-purple);
+  box-shadow: var(--glow-purple);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: linear-gradient(135deg, #00f3ff, #0077b6);
+  box-shadow: var(--glow-blue);
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.card p, .card li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.card ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+/* RECRUITMENT BOX */
+.recruit-box {
+  text-align: center;
+  padding: 35px 25px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid var(--neon-pink);
+  box-shadow: var(--glow-pink);
+  backdrop-filter: blur(15px);
+}
+
+.recruit-box h3 {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  color: #e60067;
+  margin-bottom: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.recruit-box p {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* TIMELINE STEPS */
+.timeline {
+  display: grid;
+  gap: 15px;
+}
+
+.step {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 18px 24px;
+  border-radius: 24px;
+  border: 1.5px solid rgba(138, 43, 226, 0.25);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.step:hover {
+  transform: translateX(6px);
+  border-color: var(--neon-blue);
+  box-shadow: var(--glow-blue);
+}
+
+.number {
+  min-width: 55px;
+  height: 55px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ff007f, #8a2be2);
+  color: #ffffff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(255, 0, 127, 0.3);
+}
+
+.step h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.step p, .step li {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.step ul {
+  padding-left: 18px;
+  margin-top: 6px;
+}
+
+/* DOCUMENTS GRID */
+.docs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.doc {
+  padding: 22px 16px;
+  text-align: center;
+  border-radius: 22px;
+  background: var(--card-bg);
+  border: 1.5px solid rgba(0, 243, 255, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.doc:hover {
+  transform: translateY(-6px);
+  border-color: var(--neon-pink);
+  box-shadow: var(--glow-pink);
+}
+
+.doc span {
+  font-size: 34px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.doc h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* MOTTO SECTION */
+.motto {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  border: 2px solid var(--neon-blue);
+  box-shadow: var(--glow-blue);
+  margin: 40px 0;
+}
+
+.motto h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #0077b6;
+  text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.motto p {
+  font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+  color: #e60067;
+  font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+  padding: 25px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-top: 2px solid rgba(0, 243, 255, 0.2);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .hero-box {
+    padding: 35px 18px;
+  }
+  
+  .step {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .number {
+    min-width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="neon-orb-1"></div>
+<div class="neon-orb-2"></div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-box">
+      <div class="badge">2 UP EME COY NCC</div>
+      <h1>NCC Recruitment</h1>
+      <h2>2 UP EME COY NCC BHU Varanasi</h2>
+      <p>
+        Build discipline, confidence, leadership, and patriotism through NCC training, camps, adventure, and teamwork.
+      </p>
+      <a href="#selection" class="btn">View Process</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="heading">
+      <h2>Why Join NCC?</h2>
+      <p>Develop leadership, fitness, and confidence.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>Discipline</h3>
+        <p>Build responsibility, confidence, and personality.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⭐</div>
+        <h3>Leadership</h3>
+        <p>Improve teamwork, communication, and leadership skills.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏕️</div>
+        <h3>Training</h3>
+        <p>Experience camps, drills, firing, and adventure activities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="heading">
+      <h2>Recruitment Period</h2>
+      <p>Expected NCC enrollment schedule.</p>
+    </div>
+
+    <div class="recruit-box">
+      <h3>September – October</h3>
+      <p>Official dates will be announced soon.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="heading">
+      <h2>Eligibility</h2>
+      <p>Basic requirements for NCC recruitment.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>Student</h3>
+        <p>Must be a student of BHU or Jagatpur PG College.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💪</div>
+        <h3>Fitness</h3>
+        <p>Physically and mentally fit for NCC training.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔥</div>
+        <h3>Interest</h3>
+        <p>Good discipline and interest in NCC activities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="selection">
+  <div class="container">
+    <div class="heading">
+      <h2>Selection Process</h2>
+      <p>Complete NCC recruitment stages.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="step">
+        <div class="number">1</div>
+        <div>
+          <h3>Registration</h3>
+          <p>Submit enrollment form and documents.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <div>
+          <h3>Physical Test</h3>
+          <ul>
+            <li>Running</li>
+            <li>Push-Ups</li>
+            <li>Fitness Assessment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <div>
+          <h3>Physical Standard</h3>
+          <ul>
+            <li>Height</li>
+            <li>Chest</li>
+            <li>Body Fitness</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="number">4</div>
+        <div>
+          <h3>Written Exam</h3>
+          <ul>
+            <li>GK & GS</li>
+            <li>Reasoning</li>
+            <li>Mathematics</li>
+            <li>Current Affairs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="number">5</div>
+        <div>
+          <h3>CO Interview</h3>
+          <ul>
+            <li>Confidence</li>
+            <li>Leadership</li>
+            <li>Communication</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="number">6</div>
+        <div>
+          <h3>Final Selection</h3>
+          <p>Based on overall performance in all stages.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="heading">
+      <h2>Required Documents</h2>
+    </div>
+
+    <div class="docs">
+      <div class="doc"><span>🪪</span><h4>Aadhaar Card (ZEROX)</h4></div>
+      <div class="doc"><span>📷</span><h4>Passport Size Photos (3 COPIES)</h4></div>
+      <div class="doc"><span>🏫</span><h4>College ID (ZEROX)</h4></div>
+      <div class="doc"><span>📄</span><h4>Marksheet (10TH and 12TH ZEROX)</h4></div>
+      <div class="doc"><span>🛡️</span><h4>Character Certificate (ZEROX)</h4></div>
+      <div class="doc"><span>🏥</span><h4>Medical Certificate</h4></div>
+      <div class="doc"><span>🏠</span><h4>Residence Certificate (ZEROX)</h4></div>
+      <div class="doc"><span>🩸</span><h4>Blood Group</h4></div>
+      <div class="doc"><span>👨‍👩‍👦</span><h4>Parent Consent</h4></div>
+      <div class="doc"><span>📱</span><h4>Mobile NO. & Email</h4></div>
+      <div class="doc"><span>📝</span><h4>NCC Form</h4></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section class="motto">
+    <h2>Unity and Discipline</h2>
+    <p>“Once a Cadet, Always a Cadet.”</p>
+  </section>
+</div>
+
+<footer>
+  FOR MORE INFORMATION, PLEASE CONTACT NCC OFFICE (2 UP EME COY NCC, IIT BHU, Varanasi) OR ANO
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OUR ACHIEVERS | 2 UP EME COY NCC</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   CSS STYLESHEET (Developer Reference Only)
+   ========================================================================== */
+
+:root {
+  --bg-light: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --neon-cyan: #00f3ff;
+  --neon-pink: #ff007f;
+  --neon-blue: #0077b6;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --glow-pink: 0 0 20px rgba(255, 0, 127, 0.45);
+  --glow-cyan: 0 0 20px rgba(0, 243, 255, 0.35);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -2;
+}
+
+.neon-orb-1 {
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(255, 0, 127, 0.2), transparent 70%);
+  top: -100px;
+  right: -100px;
+  z-index: -1;
+  filter: blur(50px);
+}
+
+.neon-orb-2 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 243, 255, 0.2), transparent 70%);
+  bottom: -150px;
+  left: -100px;
+  z-index: -1;
+  filter: blur(60px);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.main-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 35px;
+  background: linear-gradient(135deg, #ff007f, #0077b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.main-sub-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 35px;
+  background: linear-gradient(135deg, #1585ef, #5acf1b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.achievers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.achiever-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 22px;
+  border: 2px solid rgba(255, 0, 127, 0.4);
+  box-shadow: var(--glow-pink);
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.achiever-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+.achiever-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 6px 18px rgba(255, 0, 127, 0.2);
+}
+
+.name-highlight-box {
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, rgba(255, 0, 127, 0.12), rgba(0, 243, 255, 0.12));
+  border: 1.5px solid var(--neon-pink);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+}
+
+.name-highlight-box h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ff007f;
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.box {
+  margin-top: 14px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 5px solid var(--neon-pink);
+  border-radius: 12px;
+  line-height: 1.7;
+  font-size: 14.5px;
+  color: var(--text-dark);
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  flex-grow: 1;
+}
+
+.highlight-blue {
+  color: #0077b6;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(0, 243, 255, 0.4);
+  background: rgba(0, 243, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.footer-heading {
+  text-align: center;
+  color: var(--neon-pink);
+  margin-top: 40px;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+}
+
+@media(max-width: 600px) {
+  body {
+    padding: 20px 12px;
+  }
+  .achiever-card {
+    padding: 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="neon-orb-1"></div>
+<div class="neon-orb-2"></div>
+
+<div class="container">
+
+  <h1 class="main-title">🏆 OUR ACHIEVERS</h1>
+  <h2 class="main-sub-title">2 UP EME COY NCC, IIT BHU Varanasi</h2>
+  <div class="achievers-grid">
+
+    <div class="achiever-card">
+      <img src="anand ACHIEMENT.jpg" alt="Anand Kumar Gupta Achievement">
+      
+      <div class="name-highlight-box">
+        <h3>CDT Anand Kumar Gupta</h3>
+      </div>
+      
+      <div class="box">
+        NCC Cadet of <span class="highlight-blue">2 UP EME COY NCC Varanasi</span>, has successfully published four books, bringing pride to both the college and the NCC fraternity.
+      </div>
+    </div>
+
+
+    <div class="achiever-card">
+      <img src="anuragsingh.png.png" alt="Anurag Singh Achievement">
+      
+      <div class="name-highlight-box">
+        <h3> CDT Anurag Singh</h3>
+      </div>
+      
+      <div class="box">
+        A proud achievement by NCC Cadet of <span class="highlight-blue">2 UP EME COY NCC BHU Varanasi</span>, for demonstrating outstanding performance and Dedication in BMC COURSE MANALI.
+      </div>
+    </div>
+
+
+    </div> <h2 class="footer-heading">SHAPING FUTURE LEADERS</h2>
+
+</div>
+
+</body>
+</html>
